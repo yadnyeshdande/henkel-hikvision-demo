@@ -41,3 +41,16 @@ __pycache__/
 dist/
 dist.zip
 *.exe
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Build outputs / artifacts
+dist/
+dist.zip
+*.exe
+
+# local backup bundle (optional)
+repo-backup.bundle
+
