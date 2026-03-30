@@ -1973,13 +1973,13 @@ class MainWindow(QMainWindow):
             
             if reply == QMessageBox.Yes:
                 # Test each relay
-                for i in range(1, 5):
+                for i in range(1, 11):
                     relay.set_state(i, True)
                     QMessageBox.information(self, "Testing", f"Relay {i} is now ON\nClick OK to continue...")
                     relay.set_state(i, False)
                 
-                QMessageBox.information(self, "Test Complete", "All 4 relays tested successfully!")
-                logger.info("4-Relay test completed")
+                QMessageBox.information(self, "Test Complete", "All 8 relays tested successfully!")
+                logger.info("8-Relay test completed")
         except Exception as e:
             logger.error(f"Relay test failed: {e}")
             QMessageBox.critical(self, "Test Failed", f"Relay test failed:\n{str(e)}")
